@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  /* Light theme colors */
+  --background: #f8f9fa;
   --foreground: #171717;
+  --jungle-green-light: #a3b18a;
+
+  /* === Paleta de Marca === */
+  /* Colores Corporativos Kaplan */
+  --brand-blue: #002d62;
+  --brand-orange: #f58220;
+  --brand-orange-hover: #d9701c;
+
+  /* Colores Temáticos Selva (Valle) */
+  --brand-green-dark: #166534; /* Equivalente a green-800 */
+  --brand-green-light: #15803d; /* Equivalente a green-700 */
+  --brand-green-hover: #14532d; /* Equivalente a green-900 */
+
+  --jungle-green-dark: #344e41;
+  --jungle-sky: #dad7cd;
 }
 
 @theme inline {
@@ -14,13 +30,70 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* Dark theme colors */
+    --background: #1c1c1c;
     --foreground: #ededed;
+    --jungle-green-light: #3a5a40;
+
+    /* === Paleta de Marca (Oscuro) === */
+    --brand-blue: #002d62;
+    --brand-orange: #f58220;
+    --brand-orange-hover: #d9701c;
+    --brand-green-dark: #166534;
+    --brand-green-light: #15803d;
+    --brand-green-hover: #14532d;
+
+    --jungle-green-dark: #1a2d21;
+    --jungle-sky: #3a3a3a;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Usamos las fuentes que ya tienes configuradas */
+  font-family: var(--font-sans);
+  position: relative; /* Necesario para el pseudo-elemento */
+}
+
+/* Pseudo-elemento para el fondo animado */
+body::before {
+  content: '';
+  position: fixed; /* Fijo para que no se mueva con el scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Lo ponemos detrás de todo el contenido */
+  background: linear-gradient(-45deg, var(--jungle-green-light), var(--jungle-sky), var(--jungle-green-dark));
+  background-size: 400% 400%;
+  animation: jungleGradient 20s ease infinite;
+  opacity: 0.3; /* Aumentamos un poco la opacidad para más presencia */
+}
+
+@keyframes jungleGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animación para el gato caminante */
+.animate-gato {
+  /* Inicia justo fuera de la vista a la izquierda y se mueve a la derecha */
+  animation: gato-walk 15s linear infinite;
+}
+
+@keyframes gato-walk {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100vw); /* Se mueve hasta salir por el otro lado */
+  }
 }
