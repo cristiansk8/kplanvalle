@@ -18,6 +18,17 @@ const ValleActivations = () => {
             <a href="#contacto-valle" className="self-center md:self-start bg-[var(--brand-green-dark)] text-white font-bold py-3 px-8 rounded-full hover:bg-[var(--brand-green-hover)] transition-transform hover:scale-105">
               Saber Más
             </a>
+
+                    {/* Gato caminando animado (visible solo en desktop) */}
+        <div className="hidden md:flex flex-1 items-center mx-8">
+          <div className="relative w-full h-12 overflow-x-hidden">
+            <img
+              src="/gatas-walking.gif" // Tu GIF en la carpeta /public
+              alt="Gato caminando"
+              className="absolute left-0 top-0 h-12 animate-gato"
+            />
+          </div>
+        </div>
           </div>
           <div className="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
             <Image src="/LOGO-1.0.jpg" alt="Logo Activaciones Valle del Cauca" width={300} height={300} className="rounded-lg object-contain" />

@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const AnnouncementBar = () => {
   return (
-    <div className="bg-[var(--brand-blue)] text-white text-sm font-medium">
+    <div className="bg-white text-blue text-sm font-medium">
       <div className="container mx-auto px-4 py-2 flex justify-center items-center text-center">
         <p>
           <span role="img" aria-label="party popper">🎉</span>
