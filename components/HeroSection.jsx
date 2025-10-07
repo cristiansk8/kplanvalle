@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-3xl mb-10">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-            Estudia inglés en el extranjero
+            Estudia idiomas en el extranjero
           </h1>
           <p className="text-lg md:text-xl">
             Elige tu destino ideal y vive una experiencia inolvidable mientras aprendes.
@@ -51,8 +51,9 @@ const HeroSection = () => {
             <label htmlFor="course" className="block text-sm font-medium text-gray-600">¿Qué te gustaría estudiar?</label>
             <select name="course" id="course" onChange={handleChange} className="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
               <option value="">Selecciona un curso</option>
-              <option value="ingles-general">Inglés General</option>
-              <option value="ingles-intensivo">Inglés Intensivo</option>
+              <option value="ingles-general">Inglés general</option>
+              <option value="ingles-intensivo">Inglés intensivo</option>
+              <option value="ingles-intensivo">Inglés semi intensivo</option>
             </select>
           </div>
           <div className="text-gray-800">
