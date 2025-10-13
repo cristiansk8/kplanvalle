@@ -164,7 +164,7 @@ export default function KaplanDestinationsInternal() {
   const filteredDestinations = destinations.filter(dest => {
     const matchesCountry = selectedCountry === 'all' || dest.country === selectedCountry;
     const matchesSearch = dest.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         dest.country.toLowerCase().includes(searchTerm.toLowerCase());
+      dest.country.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCountry && matchesSearch;
   });
 
@@ -178,7 +178,7 @@ export default function KaplanDestinationsInternal() {
             backgroundSize: '40px 40px'
           }}></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -266,11 +266,10 @@ export default function KaplanDestinationsInternal() {
                 <button
                   key={country.code}
                   onClick={() => setSelectedCountry(country.code)}
-                  className={`px-3 sm:px-4 py-2 rounded-full font-medium transition-all text-sm sm:text-base ${
-                    selectedCountry === country.code
+                  className={`px-3 sm:px-4 py-2 rounded-full font-medium transition-all text-sm sm:text-base ${selectedCountry === country.code
                       ? 'bg-blue-600 text-white shadow-lg transform scale-105'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'
-                  }`}
+                    }`}
                 >
                   <span className="mr-1">{country.flag}</span>
                   <span className="hidden sm:inline">{country.name}</span>
@@ -279,7 +278,7 @@ export default function KaplanDestinationsInternal() {
               ))}
             </div>
           </div>
-          
+
           {/* Results count */}
           <div className="mt-4 text-sm text-gray-600">
             Mostrando <span className="font-bold text-blue-600">{filteredDestinations.length}</span> destino{filteredDestinations.length !== 1 ? 's' : ''}
@@ -305,7 +304,7 @@ export default function KaplanDestinationsInternal() {
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  
+
                   {/* Featured badge */}
                   {dest.featured && (
                     <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-lg">
@@ -313,7 +312,7 @@ export default function KaplanDestinationsInternal() {
                       Popular
                     </div>
                   )}
-                  
+
                   {/* Country flag badge */}
                   <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-700 flex items-center gap-1 shadow-lg">
                     <span>{dest.flag}</span>
@@ -366,10 +365,15 @@ export default function KaplanDestinationsInternal() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-2 group shadow-lg">
+                  <a
+                    href={`https://wa.me/573118572469?text=Hola%2C%20me%20interesa%20estudiar%20en%20${encodeURIComponent(dest.city)}%20${dest.flag}%0A%0APor%20favor%2C%20env%C3%ADenme%20m%C3%A1s%20informaci%C3%B3n%20sobre%3A%0A-%20Escuelas%20disponibles%0A-%20Programas%3A%20${encodeURIComponent(dest.programs.join(', '))}%0A-%20Costos%20y%20fechas%0A%0A%C2%A1Gracias!`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-2 group shadow-lg"
+                  >
                     Ver Escuelas en {dest.city}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -386,7 +390,7 @@ export default function KaplanDestinationsInternal() {
           <p className="text-lg sm:text-xl mb-8 text-blue-100">
             Solicita tu asesoría personalizada GRATIS y encuentra el destino perfecto para ti
           </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/573118572469?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20asesor%C3%ADa%20gratuita%20para%20estudiar%20en%20el%20extranjero%20%F0%9F%8C%8D"
               target="_blank"
