@@ -386,15 +386,19 @@ export default function KaplanDestinationsInternal() {
           <p className="text-lg sm:text-xl mb-8 text-blue-100">
             Solicita tu asesoría personalizada GRATIS y encuentra el destino perfecto para ti
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contactanos"
+              href="https://wa.me/573118572469?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20asesor%C3%ADa%20gratuita%20para%20estudiar%20en%20el%20extranjero%20%F0%9F%8C%8D"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105"
             >
               Solicitar Asesoría Gratis
             </a>
             <a
-              href="#destinos"
+              href="https://wa.me/573118572469?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20destinos%20disponibles%20para%20estudiar%20idiomas%20%E2%9C%88%EF%B8%8F"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-blue-600 transition-all"
             >
               Ver Todos los Destinos
