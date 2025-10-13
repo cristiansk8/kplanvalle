@@ -7,7 +7,7 @@ const ValleActivations = () => {
   const handleDownload = () => {
     // Crear un enlace temporal para descargar el PDF
     const link = document.createElement('a');
-    link.href = '/activaciones-valle.pdf'; // Asegúrate de que el PDF esté en la carpeta /public
+    link.href = '/kaplan-adult-courses-2026-latam.pdf'; // Asegúrate de que el PDF esté en la carpeta /public
     link.download = 'Activaciones-Valle-Kaplan.pdf'; // Nombre del archivo al descargar
     document.body.appendChild(link);
     link.click();
