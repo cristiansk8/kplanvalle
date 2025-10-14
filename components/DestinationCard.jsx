@@ -179,7 +179,7 @@ export default function KaplanDestinationsInternal() {
           }}></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div id='destinos' className="max-w-7xl mx-auto relative z-10">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <Globe className="w-12 h-12 sm:w-16 sm:h-16 mr-3 sm:mr-4" />

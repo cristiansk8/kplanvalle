@@ -15,7 +15,7 @@ const ValleActivations = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20">
+    <section id='valle' className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden md:flex">
           <div className="md:w-1/2 p-8 sm:p-12 flex flex-col justify-center text-center md:text-left">

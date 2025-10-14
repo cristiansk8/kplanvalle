@@ -10,10 +10,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
+    { name: 'Valle', href: '#valle' },
     { name: 'Destinos', href: '#destinos' },
-    { name: 'Cursos de Inglés', href: '#cursos' },
-    { name: 'Alojamiento', href: '#alojamiento' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Empezar', href: '#empezar' },
+    { name: 'Contactar', href: '#contactar' },
   ];
 
   return (

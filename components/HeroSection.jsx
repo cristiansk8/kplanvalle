@@ -41,7 +41,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative bg-gray-800 text-white flex items-center h-[85vh] min-h-[600px]">
+    <section id='empezar' className="relative bg-gray-800 text-white flex items-center h-[85vh] min-h-[600px]">
       {/* Imagen de fondo con un overlay oscuro para que el texto sea legible */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -94,8 +94,6 @@ const HeroSection = () => {
               <option value="Reino Unido">Reino Unido</option>
               <option value="Canadá">Canadá</option>
               <option value="Irlanda">Irlanda</option>
-              <option value="Australia">Australia</option>
-              <option value="Nueva Zelanda">Nueva Zelanda</option>
               <option value="Francia">Francia</option>
               <option value="Alemania">Alemania</option>
               <option value="Suiza">Suiza</option>

@@ -53,7 +53,7 @@ export default function ContactFormSupabase() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-8 bg-white shadow-xl rounded-lg border-t-4 border-red-600 my-12">
+    <div id='contactar' className="max-w-xl mx-auto p-8 bg-white shadow-xl rounded-lg border-t-4 border-red-600 my-12">
       <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
         Recibe Asesoría Gratuita
       </h2>

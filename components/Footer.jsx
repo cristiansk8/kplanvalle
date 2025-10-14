@@ -14,28 +14,28 @@ const Footer = () => {
     {
       title: 'Cursos Populares',
       links: [
-        { name: 'Inglés General', href: '#' },
-        { name: 'Inglés Intensivo', href: '#' },
-        { name: 'Preparación de Exámenes', href: '#' },
-        { name: 'Inglés de Negocios', href: '#' },
+        { name: 'Inglés General', href: '#empezar' },
+        { name: 'Inglés Intensivo', href: '#empezar' },
+        { name: 'Preparación de Exámenes', href: '#empezar' },
+        { name: 'Inglés de Negocios', href: '#empezar' },
       ],
     },
     {
       title: 'Destinos',
       links: [
-        { name: 'Estudiar en EE.UU.', href: '#' },
-        { name: 'Estudiar en Reino Unido', href: '#' },
-        { name: 'Estudiar en Canadá', href: '#' },
-        { name: 'Ver todos los destinos', href: '#' },
+        { name: 'Estudiar en EE.UU.', href: '#destinos' },
+        { name: 'Estudiar en Reino Unido', href: '#destinos' },
+        { name: 'Estudiar en Canadá', href: '#destinos' },
+        { name: 'Ver todos los destinos', href: '#destinos' },
       ],
     },
     {
       title: 'Sobre Kaplan',
       links: [
-        { name: 'Nuestra Historia', href: '#' },
-        { name: 'Acreditaciones', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Contáctanos', href: '#' },
+        { name: 'Nuestra Historia', href: '#valle' },
+        { name: 'Acreditaciones', href: '#valle' },
+        { name: 'Blog', href: '#valle' },
+        { name: 'Contáctanos', href: '#contacto' },
       ],
     },
   ];
@@ -81,7 +81,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4">Descarga nuestro catálogo</h3>
             <p className="text-gray-300 text-sm mb-4">Obtén toda la información sobre nuestros cursos y destinos.</p>
-            <a href="#" className="w-full text-center bg-[var(--brand-orange)] text-white font-bold py-2 px-4 rounded-full hover:bg-[var(--brand-orange-hover)] transition-colors">
+            <a href="#valle" className="w-full text-center bg-[var(--brand-orange)] text-white font-bold py-2 px-4 rounded-full hover:bg-[var(--brand-orange-hover)] transition-colors">
               Descargar
             </a>
           </div>
@@ -91,9 +91,9 @@ const Footer = () => {
         <div className="text-center text-xs text-gray-400 pt-8 border-t border-white/20">
           <p>&copy; {new Date().getFullYear()} Kaplan International. Todos los derechos reservados.</p>
           <div className="mt-2 space-x-4">
-            <a href="#" className="hover:underline">Política de Privacidad</a>
+            <a href="#valle" className="hover:underline">Política de Privacidad</a>
             <span>|</span>
-            <a href="#" className="hover:underline">Términos y Condiciones</a>
+            <a href="#valle" className="hover:underline">Términos y Condiciones</a>
           </div>
         </div>
       </div>
