@@ -4,10 +4,8 @@ import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Facebook />, href: '#', name: 'Facebook' },
-    { icon: <Twitter />, href: '#', name: 'Twitter' },
-    { icon: <Instagram />, href: '#', name: 'Instagram' },
-    { icon: <Youtube />, href: '#', name: 'YouTube' },
+    { icon: <Facebook />, href: 'https://web.facebook.com/kaplanvalle', name: 'Facebook' },
+    { icon: <Instagram />, href: 'https://www.instagram.com/kaplan.international.valle/', name: 'Instagram' },
   ];
 
   const footerSections = [
@@ -54,6 +52,8 @@ const Footer = () => {
                 key={social.name}
                 href={social.href}
                 aria-label={social.name}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 {social.icon}
