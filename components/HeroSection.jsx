@@ -1,26 +1,15 @@
 // /components/HeroSection.js
 'use client'; // Necesario para manejar el estado del formulario
 
-import { useState, useEffect } from 'react';
-import BlackFridayPopup from './BlackFridayPopup';
+import { useState } from 'react';
 
 const HeroSection = () => {
-  const [isPopupOpen, setPopupOpen] = useState(false);
   // Estado para guardar los datos del formulario
   const [formData, setFormData] = useState({
     course: '',
     destination: '',
     startMonth: '',
   });
-
-  // Abrir el popup después de 3 segundos
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPopupOpen(true);
-    }, 3000);
-
-    return () => clearTimeout(timer); // Limpiar el temporizador si el componente se desmonta
-  }, []);
 
   // Función que se ejecuta cada vez que un campo del formulario cambia
   const handleChange = (e) => {
@@ -53,8 +42,6 @@ const HeroSection = () => {
 
   return (
     <section id='empezar' className="relative bg-gray-800 text-white flex items-center h-[85vh] min-h-[600px]">
-      <BlackFridayPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
-
       {/* Imagen de fondo con un overlay oscuro para que el texto sea legible */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
